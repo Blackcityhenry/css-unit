@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Unit Scale</title>
+  <link rel="shortcut icon" type="image/png" href="img/css.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.1.7/dist/vuetify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main id="app">
+    <v-app>
+      <v-app-bar class="pink lighten-2" app dark>
+        <v-avatar tile class="mr-3">
+          <img src="img/css.png" alt="Site Logo" width="48">
+        </v-avatar>
+        <span class="headline">CSS Unit Scale</span>
+      </v-app-bar>
+      <v-content>
+        <v-container fill-height fluid class="pink lighten-4  align-start">
+          <v-row>
+            <v-col>
+              <v-card>
+                <v-card-title>Playground</v-card-title>
+                <v-row class="playground">
+                  <v-col cols="2" class="playground-slider d-flex align-center">
+                    <v-slider vertical v-model="playground" color="pink" track-color="pink lighten-3" min="1" max="15" thumb-label="always"></v-slider>
+                  </v-col>
+                  <v-col cols="10">
+                    <div v-for="u in unit" class="playground-row">
+                      <div class="playground-row__text">{{ playground  + u }}</div>
+                      <div class="d-block playground-row__grid pink" :style="'width: ' + playground + u + ';'"></div>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-content>
+    </v-app>
+  </main>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js" integrity="sha256-ufGElb3TnOtzl5E4c/qQnZFGP+FYEZj5kbSEdJNrw0A=" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js" integrity="sha256-chlNFSVx3TdcQ2Xlw7SvnbLAavAQLO0Y/LBiWX04viY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.1.7/dist/vuetify.min.js" integrity="sha256-DlTDGRrlsHPd3HR0Kb0QVxIeBK55rZJA2D+xI+o5c6E=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+</body>
+</html>

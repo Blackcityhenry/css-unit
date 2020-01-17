@@ -1,0 +1,21 @@
+html, body{
+  overflow-y: auto;
+}
+.playground{
+}
+.playground-slider{
+
+}
+.playground-row{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.playground-row__text{
+  margin-right: 10px;
+  flex: 0 0 70px;
+}
+.playground-row__grid{
+  height: 50px;
+}
